@@ -7,7 +7,7 @@ type ButtonProps = {
   
   const Button: React.FC<ButtonProps> = ({ title, onClick, className }) => (
     <button
-      className={`p-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition ${className || ''}`}
+      className={`p-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 cursor-pointer transition ${className || ''}`}
       onClick={onClick}
     >
       {title}

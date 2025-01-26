@@ -6,6 +6,8 @@ import grassImage from '../assets/images/grass.jpg';
 const carouselItems = [
   { id: 1, imageUrl: woodlandImage },
   { id: 2, imageUrl: grassImage },
+  { id: 3, imageUrl: woodlandImage },
+  { id: 4, imageUrl: grassImage },
 ];
 
 const Carousel: React.FC = () => {
@@ -15,6 +17,7 @@ const Carousel: React.FC = () => {
   const handlers = useSwipeable({
     onSwipedLeft: () => setSlideIndex((prev) => (prev + 1) % totalSlides),
     onSwipedRight: () => setSlideIndex((prev) => (prev - 1 + totalSlides) % totalSlides),
+    trackMouse: true,
   });
 
   return (
