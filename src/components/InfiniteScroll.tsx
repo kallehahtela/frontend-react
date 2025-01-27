@@ -17,48 +17,57 @@ import Wordpress from '../../src/assets/logos/wordpress.svg';
 import Youtube from '../../src/assets/logos/youtube.svg';
 
 const InfiniteScroll: React.FC = () => {
-    const logos = [
-        Apple, 
-        Discord, 
-        Facebook, 
-        Github,
-        Google,
-        Instagram,
-        Linkedin,
-        Stripe,
-        Tiktok,
-        Twitter,
-        Windows,
-        Wordpress,
-        Youtube,
-      ];
+  const logos = [
+    Apple,
+    Discord,
+    Facebook,
+    Github,
+    Google,
+    Instagram,
+    Linkedin,
+    Stripe,
+    Tiktok,
+    Twitter,
+    Windows,
+    Wordpress,
+    Youtube,
+  ];
 
-    return (
-        <div className="overflow-hidden relative w-full bg-gray-100 py-4">
-        <motion.div
-          className="flex gap-x-15"
-          animate={{ x: ["0%", "-100%"] }} // Move from start to end seamlessly
-          transition={{
-            repeat: Infinity,
-            duration: 40, // Adjust speed here
-            ease: "linear",
-          }}
-          style={{
-            width: `${logos.length * 2 * 8}rem`, // Dynamically set width
-          }}
-        >
-          {/* Logos: Original + Duplicate */}
-          {[...logos, ...logos].map((Logo, index) => (
-            <div
-              key={index}
-              className="w-10 h-10 flex-shrink-0 flex items-center justify-center"
-            >
-              <img src={Logo} alt={`Firm ${index % logos.length + 1}`} className="object-contain" />
-            </div>
-          ))}
-        </motion.div>
-      </div>
-    );
-  };
+  const logoWidth = 80; // Approximate width of each logo
+  const containerWidth = logos.length * logoWidth;
 
-export default InfiniteScroll
+  // Duplicate logos to ensure seamless scroll
+  const repeatedLogos = [...logos, ...logos];
+
+  return (
+    <div className="overflow-hidden relative bg-gray-100 py-4">
+      <motion.div
+        className="flex gap-10"
+        animate={{ x: ['0%', `-${containerWidth}px`] }} // Fixed backtick interpolation
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: 'linear',
+        }}
+        style={{
+          width: `${containerWidth * 2}px`, // Account for repeated logos
+        }}
+      >
+        {repeatedLogos.map((Logo, index) => (
+          <div
+            key={index}
+            className="w-10 h-10 flex-shrink-0 flex items-center justify-center mx-2"
+          >
+            <img
+              src={Logo}
+              alt={`Firm ${index % logos.length + 1}`}
+              className="object-contain"
+            />
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  );
+};
+
+export default InfiniteScroll;

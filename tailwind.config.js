@@ -8,7 +8,7 @@ module.exports = {
           },
         },
         animation: {
-            scroll: "scroll linear infinite",
+            scroll: "scroll 30s linear infinite",
         },
       },
     },

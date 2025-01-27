@@ -7,7 +7,7 @@ type ButtonProps = {
   
   const BorderButton: React.FC<ButtonProps> = ({ title, onClick, className }) => (
     <button
-      className={`p-3 border border-blue-600 rounded-md bg-white text-blue-600 hover:bg-blue-500 hover:text-white hover:border-none cursor-pointer transition ${className || ''}`}
+      className={`p-3 border border-blue-600 rounded-md bg-grey-100 text-blue-600 hover:bg-blue-500 hover:text-white hover:border-blue-500 cursor-pointer transition ${className || ''}`}
       onClick={onClick}
     >
       {title}
