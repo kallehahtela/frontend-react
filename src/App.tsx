@@ -10,6 +10,7 @@ import Services from './components/Services'
 function App() {
   return (
     <>
+      {/* FOR IP12 PRO ONLY FOR DEBUGGING */}
       <div
         className='flex flex-col items-center overflow-x-hidden overflow-y-auto min-h-screen bg-gray-100'>
         <SearchBar placeholder={`Don't be lazy, get productive...`}/>
