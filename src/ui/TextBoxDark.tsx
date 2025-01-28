@@ -27,7 +27,7 @@ const TextBoxDark:React.FC<TextProps> = ({ title, text, className }) => {
             </h4>
         <Button 
             title="Pricing"
-            className="relative w-2/4 ml-20 mt-5 text-lg font-semibold"
+            className="relative w-2/5 ml-23 mt-5 text-sm font-bold bg-sky-600"
         />
         </div>
     );

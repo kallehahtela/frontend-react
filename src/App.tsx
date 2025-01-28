@@ -5,8 +5,7 @@ import Hero from './components/Hero'
 import InfiniteScroll from './components/InfiniteScroll'
 import Services from './components/Services'
 import TextBoxDark from './ui/TextBoxDark'
-
-
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -23,9 +22,10 @@ function App() {
         <InfiniteScroll />
         <Services />
         <TextBoxDark 
-            title='Choose us for your web journey!' 
-            text={`We provide the most developer <br /> like environment for non-code web <br /> development. Now you have a great <br /> change to get evolved in the change <br /> of website and web application <br /> development. There is none previous <br /> experience in coding & design <br /> required in order to make beautiful <br /> and well structured websites or web <br /> applications. There is an easy to <br /> follow along documentation to get <br /> started. Also there is some tutorials <br /> for how to add a certain feature in.`}
-          />
+          title='Choose us for your web journey!' 
+          text={`We provide the most developer <br /> like environment for non-code web <br /> development. Now you have a great <br /> change to get evolved in the change <br /> of website and web application <br /> development. There is none previous <br /> experience in coding & design <br /> required in order to make beautiful <br /> and well structured websites or web <br /> applications. There is an easy to <br /> follow along documentation to get <br /> started. Also there is some tutorials <br /> for how to add a certain feature in.`}
+        />
+        <Footer />
       </div>
     </>
   )
