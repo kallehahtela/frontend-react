@@ -11,7 +11,7 @@ import TextBoxDark from './ui/TextBoxDark'
 function App() {
   return (
     <>
-      {/* FOR IP12 PRO ONLY FOR DEBUGGING */}
+      {/* FOR Iphone 12 PRO ONLY FOR DEBUGGING */}
       {/* WEB FOR LATER */}
       <div
         className='flex flex-col items-center overflow-x-hidden overflow-y-auto min-h-screen bg-gray-100'>
